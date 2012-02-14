@@ -1,0 +1,1 @@
+#OK dude here we go, so the deal is that you gotta do something where you draw a bunch of circles, and then draw some white circles, and then draw the other colored circles. Should have all the functions in the hw folder. Good luck future me!

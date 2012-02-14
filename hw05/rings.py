@@ -3,6 +3,7 @@
 import pygame
 from pygame.locals import *
 
+
 ## COLORS
 BLUE = 0, 133, 199
 RED = 223, 0, 36
@@ -24,13 +25,26 @@ screen.fill(WHITE)
 
 #################################
 ##  DRAW OLYPIC RINGS HERE
-##
-##  hint, lookup pygame.draw
-##  specifically circle, ellipse,
-##  and arc.  Also, the width
-##  parameter
-#################################
 
+#Black arcs
+pygame.draw.arc(screen,BLACK,(290,5,220,220),-1.15,3,THICKNESS)
+pygame.draw.arc(screen,BLACK,(290,5,220,220),3.33,4.83,THICKNESS)
+
+#Blue arc
+pygame.draw.arc(screen,BLUE,(45,5,220,220),-1.1,4.8,THICKNESS)
+
+#Red arc
+pygame.draw.arc(screen,RED,(535,5,220,220),3.33,9.27,THICKNESS)
+
+#Yellow arcs
+pygame.draw.arc(screen,YELLOW,(170,105,220,220),2.02,6.15,THICKNESS)
+pygame.draw.arc(screen,YELLOW,(170,105,220,220),.17,1.7,THICKNESS)
+
+#Green arcs
+pygame.draw.arc(screen,GREEN,(415,105,220,220),2.02,6.16,THICKNESS)
+pygame.draw.arc(screen,GREEN,(415,105,220,220),.2,1.7,THICKNESS)
+
+#################################
 
 ## Loop
 clock = pygame.time.Clock()
@@ -46,3 +60,4 @@ while not done:
     clock.tick(30)
 
 print "ByeBye"
+pygame.quit()

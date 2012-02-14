@@ -1,0 +1,15 @@
+Variables in Python:
+
+integers: duh
+
+long: for long numbers, not only decimals. Apparently you store them as such:
+
+100,000,000,000,000,000L
+
+But never mind because apparently this is automated in Python I guess.
+
+Float: Decimal, duh
+
+Boolean: True/false variables. So we are actually gonna use them this time?
+
+Strings: Paul says they are pretty much whatever you want, inside quotation marks. He wrote "Whatever" on the board, so there is that. 
