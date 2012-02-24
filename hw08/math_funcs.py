@@ -30,34 +30,21 @@ def distance(a, b):
 #     >>> normalize([1,1,1,1])
 #     [0.25, 0.25, 0.25, 0.25]
 
+
 def normalize(vec):
-    if vec[0]==0 and vec[1]==0 or vec[0]==0 and vec[1]==0 and vec[2]==0:
+    check = 0
+    for i in vec:
+        check+=i
+    if check == 0:
         print vec
-    elif len(vec)==3:
-        lX=float(vec[0]*vec[0])
-        lY=float(vec[1]*vec[1])
-        lZ=float(vec[2]*vec[2])
-        length = float(math.sqrt(lX+lY+lZ))
-        
-        norm = []
-        
-        normX = float(vec[0]/length)
-        norm.append(normX)
-        normY = float(vec[1]/length)
-        norm.append(normY)
-        normZ = float(vec[2]/length)
-        norm.append(normZ)
-        print norm
-    elif len(vec)==2:
-        lX=float(vec[0]*vec[0])
-        lY=float(vec[1]*vec[1])
-        length=float(math.sqrt(lX+lY))
-        
-        norm =[]
-        
-        normX = float(vec[0]/length)
-        norm.append(normX)
-        normY = float(vec[1]/length)
-        norm.append(normY)
-        print norm
+        return vec
+    leng1 = [i**2 for i in vec]
+    leng2 = 0
+    for i in leng1:
+        leng2+=i
+    leng3 = float(math.sqrt(leng2))
+    norms = [i/leng3 for i in vec]
+    print norms
+    return norms
+
 

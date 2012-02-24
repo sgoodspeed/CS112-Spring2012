@@ -38,17 +38,17 @@ def box(w,h):
         return
 
     if w==1:
-        top = "+"
-        sides = "|"
+        cor = "+"
+        lin = "|"
     else:
-        top = "+"+"-"*(w-2)+"+"
-        sides = "|"+" "*(w-2)+"|"
+        cor = "+"+"-"*(w-2)+"+"
+        lin = "|"+" "*(w-2)+"|"
     
-    print top
+    print cor
     for i in range(h-2):
-        print sides
+        print lin
     if h > 1:
-        print top
+        print cor
 
 # ADVANCED
 # Draw a Festive Tree
@@ -66,6 +66,9 @@ def box(w,h):
 #       | |
 #       | |
 
-# def tree()
+def tree(arg):
+    print arg
+    return arg
 
-
+arg = 0
+tree(arg)
