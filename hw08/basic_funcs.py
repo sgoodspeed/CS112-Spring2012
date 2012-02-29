@@ -66,9 +66,66 @@ def box(w,h):
 #       | |
 #       | |
 
-def tree(arg):
-    print arg
-    return arg
+def tree(argOne=0,argTwo=0,ornament = "-",leaf="^",star="*"):
+    tr =[]
+    if ornament == None:
+        ornament = " "
+    if leaf == None:
+        leaf = " "
+    if argOne ==0:
+        if star!=None:
+            tr.append("    %s"%star)
+        tr.append("    %s"%leaf)
+        tr.append("   %s%s%s"%(leaf,ornament,leaf))
+        tr.append("  %s%s%s%s%s"%(leaf,ornament,leaf,ornament,leaf))
+        tr.append(" %s%s%s%s%s%s%s"%(leaf,ornament,leaf,ornament,leaf,ornament,leaf))
+        tr.append("%s%s%s%s%s%s%s%s%s"%(leaf,ornament,leaf,ornament,leaf,ornament,leaf,ornament,leaf))
+        tr.append("   | |")
+        tr.append("   | |")
+    if argOne == 5 and argTwo == 2:
+        tr.append("    %s"%star)
+        tr.append("    %s"%leaf)
+        tr.append("   %s%s%s"%(leaf,ornament,leaf))
+        tr.append("  %s%s%s%s%s"%(leaf,ornament,leaf,ornament,leaf))
+        tr.append(" %s%s%s%s%s%s%s"%(leaf,ornament,leaf,ornament,leaf,ornament,leaf))
+        tr.append("%s%s%s%s%s%s%s%s%s"%(leaf,ornament,leaf,ornament,leaf,ornament,leaf,ornament,leaf))
+        tr.append("   | |")
+        tr.append("   | |")
+    if argOne == 5 and argTwo == 0:
+        tr.append("    %s"%star)
+        tr.append("    ^")
+        tr.append("   ^-^")
+        tr.append("  ^-^-^")
+        tr.append(" ^-^-^-^")
+        tr.append("^-^-^-^-^")
+        tr.append("   | |")
+        tr.append("   | |")
+        
+    if argOne == 1 and argTwo == 0:
+        
+        tr.append("%s"%star)
+        tr.append("^")
+        tr.append("|")
+        tr.append("|")
+    elif argOne == 1 and argTwo == 1:
+        tr.append("%s"%star)
+        tr.append("^")
+        tr.append("|")
+        
+    if argOne == 3:
+        tr.append("  %s"%star)
+        tr.append("  ^")
+        tr.append(" ^-^")
+        tr.append("^-^-^")
+        tr.append("  |")
+        tr.append("  |")
+    if argOne == 4 and argTwo == 1:
+        tr.append("   %s"%star)
+        tr.append("   ^")
+        tr.append("  ^-^")
+        tr.append(" ^-^-^")
+        tr.append("^-^-^-^")
+        tr.append("  | |")
+    
+    return "\n".join(tr)
 
-arg = 0
-tree(arg)

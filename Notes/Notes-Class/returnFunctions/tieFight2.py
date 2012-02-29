@@ -60,7 +60,7 @@ while not done:
         color.pop(0)
     for i in range(len(ties)):
         color[i]-=1
-        draw_tie(screen, ties[i],(color[i],color[i],color[i]))
+        draw_tie(screen, ties[i],(0,color[i],color[i]))
     
     pygame.display.flip()
     clock.tick(240)

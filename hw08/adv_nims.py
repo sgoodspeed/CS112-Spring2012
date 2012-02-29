@@ -6,6 +6,7 @@
 
 def splitparts(s):
     "split_ints takes a string and returns all chunks.  Chunks are any space separated or comma separated values"
+    return s.replace(",", " ").split()
     
 def a2idx(c):
     "converts a letter to it's index value"

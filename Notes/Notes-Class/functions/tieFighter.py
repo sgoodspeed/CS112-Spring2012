@@ -5,7 +5,7 @@ from pygame import draw
 from pygame.locals import *
 
 
-def drawTie(surf, color,pos,size=40):
+def drawTie(surf, color,pos,size=80):
     x,y = pos
     width = size/8
      #Drawing Tie Fighter here
