@@ -33,7 +33,13 @@ You can see the actual data as a table in users_data.txt
 
 def followers(users, *names):
     "find followers for given names"
-
+    flwrs = []
+    for name in names:
+        #find flwrs
+        flwrs += [ n for n in users if name in users[n]["follows"]]
+    flwrs = set(flwrs)
+    
+        #[name for name in USERS if "bob" in Users[name]["follows"]]
 
 # 2. underage_follows
 #      Find everyone that underage users (age <= 12) follow.  Make
@@ -48,7 +54,8 @@ def underage_follows(users):
 
 # 3. foaf 
 #      Foaf (friend of a freind) returns a list of everyone whom 
-#      a user's followers follow not including the user themself.
+#      a user's followers follow not including the user themself. given a user,
+#      find everyone who is a follower of geraldQ, and then find everyone they follow
 #         >>> foaf(users, "Gerald Q")
 #         [ "Sally F", "Frank L", "Steve M" ]
 

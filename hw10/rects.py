@@ -24,19 +24,43 @@ Terms:
   Rectangle:  pygame.Rect
 """
 
-from pygame import Rect
+import pygame
 
 # 1. poly_in_rect
 #      Check to see if the polygon is completely within a given 
 #      rectangle.
 #
 #      returns:  True or False
+#pygame.Rect((left, top), (width, height)): return Rect
+#
+#Rect.collidepoint(x, y): return bool
+#Rect.collidepoint((x,y)): return bool
 
 def poly_in_rect(poly, rect):
     "check if polygon is within rectangle"
+    #Setting up some variables
+    posX=rect[0]
+    posY=rect[1]
+    width=rect[2]
+    height=rect[3]
+    countPoints=0
+    #Number of points in poly
+    polyLen = len(poly)
 
-
-
+    #Setting up a list o all points contained within rect
+    rectCoords = [(x,y) for x in range(posX,width+posX)
+                  for y in range(posY,height+posY)]
+    
+    #If point is in rectCoords, count+1
+    for i in poly:
+        if i in rectCoords:
+            countPoints+=1
+    #If all points inside rect, count == polyLen, return True, else False
+    if countPoints == polyLen:
+        return True
+    else:
+        return False
+        
 # 2. surround_poly
 #      Create a rectangle which contains the given polygon.  
 #      It should return the smallest possible rectangle 
@@ -46,5 +70,34 @@ def poly_in_rect(poly, rect):
 
 def surround_poly(poly):
     "create a rectangle which surounds a polygon"
+    tempX = poly[0][0]
+    tempY = poly[0][1]
+    #Finding highest X value
+    for i in range(1,len(poly)-1):
+        if poly[i][0] > tempX:
+            tempX = poly[i][0]
+    
+    highX = tempX
 
+    #Finding lowest X value
+    for i in range(1,len(poly)-1):
+        if poly[i][0] < tempX:
+            tempX = poly[i][0]
+    lowX = tempX
+
+    #Finding highest Y value
+    for i in range(1,len(poly)-1):
+        if poly[i][1] > tempY:
+            tempY = poly[i][1]
+    highY = tempY
+    #Finding lowest Y value
+    for i in range(1,len(poly)-1):
+        if poly[i][1] < tempY:
+            tempY = poly[i][1]
+    lowY = tempY
+
+    #Setting width and height
+    width = abs(highX - lowX)
+    height = abs(highY - lowY)
+    return pygame.Rect((lowX,lowY),(width,height))
 

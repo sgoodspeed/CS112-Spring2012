@@ -16,7 +16,21 @@ manipulate python dictionaries.
 
 def freq(data):
     "calculate the frequency for each value in data"
+    tal = 0
+    dataTally = {}
+    data.sort()
+    max=len(data)
+    
+    for i in range(0,max):
+        if i in data:
+            tal = data.count(i)
+            dataTally[i] = tal
+    return dataTally
 
+
+    
+    
+        
 
 
 # 2. Movie Reviews
@@ -41,12 +55,26 @@ movies = {}
 
 def score(title, value):
     "register the score for a given movie out of 5"
+    if title not in movies:
+        movies[title] = scores = []
+        scores.append(value)
+    elif title in movies:
+        movies[title].append(value)
 
 
 def avg_score(title):
     "return the average score for a given movie"
+    if title in movies:
+        temp = 0
+        for i in movies[title]:
+            temp += i
+        
+    temp/=len(movies[title])
+    print temp
+    
 
 
+#for k,v in dict.items():
 
 # 3. parse_csv (Advanced)
 #        Takes an input string and spits back a list of comma
@@ -69,4 +97,23 @@ def avg_score(title):
 
 def parse_csv(data):
     "parses a csv file into a list of dictionaries"
+    #First we're breaking down the data into usable stuff, taking out shit
+    data = data.strip()
+    data = data.splitlines()
 
+    #
+    data = [ data.split(",") for line in data ]
+    data = [ [ cell.strip for cell in row ] for row in data]
+
+    keys = data[0]
+    csv = []
+    for row in data[1:]:
+        csv.append( dict(zip(keys,row)))
+    return csv
+    
+
+
+#pts = [[0,0],[0,1],[1,0],[1,1]]
+#keys = ["x","y"]
+#for pt in pts:
+#    print zip(keys,pt)
