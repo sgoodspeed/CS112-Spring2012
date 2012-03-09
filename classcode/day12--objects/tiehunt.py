@@ -52,6 +52,8 @@ class TieFighter(object):
 
     def draw(self,surf):
         surf.blit(self.image, self.rect)
+    def spawn(self,tie):
+        
 
 
 class Game(object):
@@ -65,6 +67,8 @@ class Game(object):
         pygame.display.set_caption(self.title)
         self.ties = []
         self.ties.append(TieFighter(200,200,3,3,self.bounds))
+    def spawn(self):
+        self.ties.append(TieFighter(random.randint(0,799),random.randint(0,599),3,3,self.bounds)
     def run(self):
         clock = pygame.time.Clock()
         done = False
@@ -85,6 +89,7 @@ class Game(object):
 
             # draw
             self.screen.fill(C_BLACK)
+            spawn
             for tie in self.ties:
                 tie.draw(self.screen)
             pygame.display.flip()

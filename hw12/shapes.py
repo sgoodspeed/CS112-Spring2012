@@ -1,3 +1,54 @@
+#!usr/bin/env python
+
+class Shape(object):
+    def area(self):
+        pass
+    def perimeter(self):
+        pass
+
+class Rect(Shape):
+    def __init__(self,width,height):
+        self.width = width
+        self.height = height
+    def area(self):
+        return self.width*self.height
+    def perimeter(self):
+        return (self.width+self.height)*2
+    
+        
+class Square(Rect):
+    def __init__(self,side):
+        self.side = side
+
+    def area(self):
+        return self.side**2
+    def perimeter(self):
+        return self.side*4
+
+
+class Circle(shape):
+    def __init__(self,radius,diameter):
+        self.radius = radius
+        self.diameter = diameter
+        self.radius = diameter/2
+    def area(self):
+        return math.pi*self.radius**2
+    def perimeter(self):
+        return math.pi*self.diameter
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
 # Shapes
 # =========================================================
 # 

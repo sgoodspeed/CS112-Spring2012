@@ -16,15 +16,11 @@ manipulate python dictionaries.
 
 def freq(data):
     "calculate the frequency for each value in data"
-    tal = 0
     dataTally = {}
-    data.sort()
-    max=len(data)
-    
-    for i in range(0,max):
-        if i in data:
-            tal = data.count(i)
-            dataTally[i] = tal
+    for v in data:
+        if v not in dataTally:
+            dataTally[v] = 0
+        dataTally[v] += 1
     return dataTally
 
 
@@ -56,21 +52,21 @@ movies = {}
 def score(title, value):
     "register the score for a given movie out of 5"
     if title not in movies:
-        movies[title] = scores = []
-        scores.append(value)
-    elif title in movies:
-        movies[title].append(value)
+        movies[title] = []
+    movies[title].append(value)
 
 
 def avg_score(title):
     "return the average score for a given movie"
-    if title in movies:
-        temp = 0
-        for i in movies[title]:
-            temp += i
+    if title not in movies:
+        return None
+
+    temp = 0.0
+    for i in movies[title]:
+        temp += i
         
     temp/=len(movies[title])
-    print temp
+    return temp
     
 
 

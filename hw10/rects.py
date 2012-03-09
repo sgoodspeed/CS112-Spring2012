@@ -70,34 +70,34 @@ def poly_in_rect(poly, rect):
 
 def surround_poly(poly):
     "create a rectangle which surounds a polygon"
-    tempX = poly[0][0]
-    tempY = poly[0][1]
+    lowX = highX = poly[0][0]
+    lowY = highY = poly[0][1]
     #Finding highest X value
     for i in range(1,len(poly)-1):
-        if poly[i][0] > tempX:
-            tempX = poly[i][0]
+        if poly[i][0] > highX:
+            highX = poly[i][0]
     
-    highX = tempX
+   
 
     #Finding lowest X value
     for i in range(1,len(poly)-1):
-        if poly[i][0] < tempX:
-            tempX = poly[i][0]
-    lowX = tempX
+        if poly[i][0] < lowX:
+            lowX = poly[i][0]
+    
 
     #Finding highest Y value
     for i in range(1,len(poly)-1):
-        if poly[i][1] > tempY:
-            tempY = poly[i][1]
-    highY = tempY
+        if poly[i][1] > highY:
+            highY = poly[i][1]
+    
     #Finding lowest Y value
     for i in range(1,len(poly)-1):
-        if poly[i][1] < tempY:
-            tempY = poly[i][1]
-    lowY = tempY
+        if poly[i][1] < lowY:
+            lowY = poly[i][1]
+    
 
     #Setting width and height
-    width = abs(highX - lowX)
-    height = abs(highY - lowY)
+    width = abs(highX - lowX)+1
+    height = abs(highY - lowY)+1
     return pygame.Rect((lowX,lowY),(width,height))
 

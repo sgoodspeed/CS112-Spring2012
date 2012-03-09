@@ -38,6 +38,7 @@ def followers(users, *names):
         #find flwrs
         flwrs += [ n for n in users if name in users[n]["follows"]]
     flwrs = set(flwrs)
+    return flwrs
     
         #[name for name in USERS if "bob" in Users[name]["follows"]]
 
@@ -49,6 +50,12 @@ def followers(users, *names):
 #          [ "Steve M", "Gerald Q", "Frank L" ]
 def underage_follows(users):
     "find who underage users follow"
+    underage = [ name for name in users.keys() if users[name]["age"] <= 12 ]
+    followed = []
+    for name in underage:
+        followed+=users[name]["follows"]
+    followed = set(followed)
+    return followed.difference(underage)
 
 
 
