@@ -47,6 +47,7 @@ class Polygon(Shape):
             sumPer += (points(i)+points(i+1))
         sumPer +=(points(0) + points(-1))
         return sumPer
+    def Area(self):
         
                       
     
