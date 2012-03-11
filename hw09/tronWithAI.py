@@ -77,7 +77,43 @@ def collision(pos,posR,posB):
 
     
 ##AI Junk and Nonsense
-def
+def changeDir(startDir,dir):
+    "Function to pick direction to turn"
+    if dir == east and startDir != south:
+        dir = south
+        return dir
+    elif dir == south and startDir != west:
+        dir = west
+        return dir
+    elif dir == west and startDir != north:
+        dir = north
+        return dir
+    elif dir == north and startDir != east:
+        dir = east
+        return dir
+def moveComp(pos,dir):
+    "Function to turn away from collision"
+    startDir = dir
+    newPos = (pos[0]+dir[0],pos[1]+dir[1])
+    if collision(newPos,posR,posB):
+        dir = changeDir(startDir,dir)
+        newPos = (pos[0]+dir[0],pos[1]+dir[1])
+        if collision(newPos,posR,posB):
+            dir = changeDir(startDir,dir)
+            newPos = (pos[0]+dir[0],pos[1]+dir[1])
+            if collision(newPos,posR,posB):
+                dir =changeDir(startDir,dir)
+                newPos = (pos[0]+dir[0],pos[1]+dir[1])
+                return newPos
+            else:
+                return newPos
+                
+            return newPos
+        else:
+            return newPos
+    else:
+        return newPos
+        
 
 ##Endgame function
 def scoreBoard():
@@ -157,7 +193,6 @@ while not done:
 
         ##Draw functions
         screen.fill((40,40,40))
-         
         drawPlayers(posR[-1],posB[-1])
         drawLine(posR,posB)
         ##Refresh
@@ -165,6 +200,10 @@ while not done:
         clock.tick(20)
 
     if endGame:
+        if winner == 1:
+            pygame.draw.circle(screen,red,(nextPosR[0]*TILE,nextPosR[1]*TILE),30)
+        elif winner == 2:
+            pygame.draw.circle(screen,red,(nextPosB[0]*TILE,nextPosB[1]*TILE),30)
         rounds+=1
         scoreBoard()
 

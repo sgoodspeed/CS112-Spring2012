@@ -43,9 +43,18 @@ Requirements:
     * bombs
 
 
-In addition, add some things to make this game "your own".  Essentially, take the requirements and make it fun to play.  You can change anything as long as it fits within your game design and is still some sort of shooter.  If you skip anything in the above list, try to replace it with something "equivilent" and mention why you skipped it in the instructions.  The point of this class is programming, not artwork. So add more code/logic, not just images.  An example of a "unique" shooter is [Ikaruga](http://www.thenewarcade.com/games/shmup/59/ikaruga), though you don't need to go that far.
+In addition, add some things to make this game "your own".  Essentially, 
+take the requirements and make it fun to play.  You can change anything 
+as long as it fits within your game design and is still some sort of shooter.
+  If you skip anything in the above list, try to replace it with something 
+"equivilent" and mention why you skipped it in the instructions.  The 
+point of this class is programming, not artwork. So add more code/logic,
+ not just images.  An example of a "unique" shooter is [Ikaruga]
+(http://www.thenewarcade.com/games/shmup/59/ikaruga), though you don't 
+need to go that far.
 
-> **NOTE:** Make sure to use git or save multiple versions before adding a new feature so you don't irreparably break your programs
+> **NOTE:** Make sure to use git or save multiple versions before adding a 
+new feature so you don't irreparably break your programs
 
 Suggestions:
  * use graphics to show what is going on
@@ -71,4 +80,6 @@ Suggestions:
  * physics
     * ex: homing missiles actually use thrust
 
-Most importantly, make your game playable and fun.  Lastly, create `INSTRUCTIONS.md` and use [markdown](http://github.github.com/github-flavored-markdown/) to create a decent description, what's included, things to look out for, and clear instructions for playing your game.
+Most importantly, make your game playable and fun.  Lastly, create `INSTRUCTIONS.md` and use [markdown]
+(http://github.github.com/github-flavored-markdown/) to create a decent description, what's included, things 
+to look out for, and clear instructions for playing your game.

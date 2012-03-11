@@ -1,5 +1,5 @@
 #!usr/bin/env python
-
+import math
 class Shape(object):
     def area(self):
         pass
@@ -11,31 +11,44 @@ class Rect(Shape):
         self.width = width
         self.height = height
     def area(self):
-        return self.width*self.height
+        temp = self.width*self.height
+        return temp
     def perimeter(self):
         return (self.width+self.height)*2
     
         
 class Square(Rect):
     def __init__(self,side):
-        self.side = side
-
+        self.width = side
+        self.height = side
     def area(self):
-        return self.side**2
+        temp = self.width*self.height
+        return temp
     def perimeter(self):
-        return self.side*4
+        return (self.width+self.height)*2
 
 
-class Circle(shape):
-    def __init__(self,radius,diameter):
+class Circle(Shape):
+    def __init__(self,radius):
+        self.diameter = radius*2
         self.radius = radius
-        self.diameter = diameter
-        self.radius = diameter/2
     def area(self):
         return math.pi*self.radius**2
     def perimeter(self):
         return math.pi*self.diameter
 
+class Polygon(Shape):
+    def __init__(self, *points):
+        self.points = [points]
+    
+    def Perimeter(self):
+        sumPer = 0
+        for i in range(0,len(points)):
+            sumPer += (points(i)+points(i+1))
+        sumPer +=(points(0) + points(-1))
+        return sumPer
+        
+                      
     
 
 
@@ -88,3 +101,15 @@ class Circle(shape):
 # 
 # You can find the area of a triangle with Heron's formula:
 #   http://www.mathopenref.com/heronsformula.html
+
+
+##BROKEN
+##        tempX = 0
+##        tempY = 0
+##        length = len(self.points)
+##        for i in range(0,):
+##            count = i+1
+            
+##            tempX += abs(self.points(i)(0)-self.points(count)(0))
+##            tempY += abs(self.points(i)(1)-self.points(count)(1))
+##        return tempX+tempY

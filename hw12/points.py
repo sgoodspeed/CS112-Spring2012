@@ -33,8 +33,12 @@ class Point(object):
         ##NOTE 1
         if slope == None:
             return "None"
-        u = distance / (math.sqrt(slope**2+1))
-        v = slope*distance / (math.sqrt(slope**2+1))
+        elif slope<0 or distance<0:
+            u = -distance / (math.sqrt(slope**2+1))
+            v = -slope*distance / (math.sqrt(slope**2+1))
+        else:
+            u = distance / (math.sqrt(slope**2+1))
+            v = slope*distance / (math.sqrt(slope**2+1))
         x2 = self.x+u
         y2 = self.y+v
         return Point(x2,y2)
