@@ -26,18 +26,18 @@ This is a good time to make up points by adding more features to your game.
 Create any type of overhead shmup.  It can be like raiden/1942 or more contemporary like geometry wars/everyday shooter. 
 
 Requirements:
- * use spritegroups as well as sprites
+ * use spritegroups as well as sprites CHECK
  * gameovers and the ability to restart the game after you lose
  * highscore(s)
  * multiple lives
- * multiple weapon types (switchable or collectable)
+ * multiple weapon types (switchable or collectable) CHECK
  * more enemies
     * at least one behaves completely differently than the others
- * a depletable resource.  ex:
+ * a depletable resource.  ex: CHECK CHECK
     * ammo
     * health
     * shield
- * collectable items.  ex:
+ * collectable items.  ex: CHECK
     * points
     * new weapons
     * bombs
