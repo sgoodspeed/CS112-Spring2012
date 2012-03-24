@@ -1,0 +1,39 @@
+
+
+tile class
+     data for:
+	  wall up
+	  wall down
+	  wall left
+	  wall right
+	  position (xy)
+	  visited (y/n)
+
+
+player:
+tiles visited
+position
+last fork visited
+is dancing? (y/n)for morale
+
+method for movinG:
+       if pos+(x1) or (y1) or (x-1) or (y-1):
+	  do that
+	  positions = []
+	  positions.append(pos)
+       elif pos (x1) AND something else:
+	    forks.append(pos)
+	    if none visited:
+	       turn right first
+	    else:
+		if straight not visited:
+		   go straight
+		   else: 
+			 go left
+       if dead end:
+	  goTo forks [-1]
+	  
+
+
+METHOD FOR TO BECOME THE MINOTAUR:
+       exe?

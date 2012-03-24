@@ -410,7 +410,7 @@ while not done:
         enemyGroup.add(Enemy())
     if check <=2:
         enemyGroup2.add(Enemy2())
-    if check <=1:
+    if check <=3:
         enemyGroup3.add(Enemy3())
     if check<=30:
         starGroup.add(Star())

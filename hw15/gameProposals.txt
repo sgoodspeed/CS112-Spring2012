@@ -1,0 +1,33 @@
+Sorry for the late! I totally forgot the deadline wasn't the end of break.
+
+Little metroidvania type game, in a garbage dump you run around and are a 
+sentient intelligence that has sprung into existence completely by chance, 
+you add little parts to yourself to increase your ability to traverse, the 
+point of the game could either be evolution or avoiding humans. (This one is 
+probably my preferred of the three, the potential project seems like it would 
+be not too difficult to set up an effective and fun control scheme and then 
+just expand the world and sequencing.)
+Gameplay:
+	
+	Power acquisition (Maybe some powers increase your brainpower and have non-locomotive benefits?)
+	
+	Platformy runny (shooty? Punchy?) gameplay
+	
+
+
+Game where you are an animal on some sort of alien-y planet, walking around 
+and trying to like, be alive. Survival type game where you sometimes fight 
+other animals, but also eat and try to survive. Could get creative with the 
+enemy types, maybe halfway through the game could add the mechanics of tool 
+use/acquisition, and having a pack to lead, changing it from sort of a run 
+and hide game to fight and strategize. I imagine the perspective/interface 
+sort of looking like a classic Zelda game, with single screens scrolling and 
+a big overworld map
+
+
+Prototype of a management/strategizing type game; you control a group of 
+nanobots whose goal is to break down and assimilate the entire planet. Each 
+level is a region or area/setting, you click to control and break down small 
+objects to get more bots to make more bots to break down larger objects, and 
+eventually specialize to a few different types of bot-puddles, some that 
+fight and some that build and some that break down. 
